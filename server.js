@@ -37,6 +37,15 @@ function filterByQuery(query, animalsArray) {
     return filteredResults
 }
 
+function findByID(id, animalsArray) {
+    const result = animalsArray.filter(animal => animal.id === id)[0]
+    if (result) {
+        return result
+    } else {
+        res.send(404)
+    }
+}
+
 app.get("/api/animals", (req, res) => {
     let results = animals
     if (req.query) {
@@ -44,6 +53,11 @@ app.get("/api/animals", (req, res) => {
     }
 
     res.json(results)
+})
+
+app.get("/api/animals/:id", (req, res) => {
+    const result = findByID(req.params.id, animals)
+    res.json(result)
 })
 
 app.listen(PORT, () => {
