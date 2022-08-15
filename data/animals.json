@@ -144,6 +144,25 @@
         "goofy"
       ],
       "id": "14"
+    },
+    {
+      "name": "Larry",
+      "species": "lemur",
+      "diet": "omnivore",
+      "personalityTraits": [
+        "hungry"
+      ],
+      "id": "15"
+    },
+    {
+      "name": "Hannah",
+      "species": "Cheetah",
+      "diet": "carnivore",
+      "personalityTraits": [
+        "hungry",
+        "zany"
+      ],
+      "id": "16"
     }
   ]
 }
